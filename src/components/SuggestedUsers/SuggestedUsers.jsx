@@ -1,4 +1,4 @@
-import { Box, Flex, Text, VStack, Link } from "@chakra-ui/react";
+import { Box, Flex, Link, Text, VStack } from "@chakra-ui/react";
 import SuggestedHeader from "./SuggestedHeader";
 import SuggestedUser from "./SuggestedUser";
 import { Link as RouterLink } from "react-router-dom";
@@ -61,8 +61,9 @@ const SuggestedUsers = () => {
           target="_blank"
           color={"blue.500"}
           fontSize={14}
-        />
-        As a John Le
+        >
+          As a John Le
+        </Link>
       </Box>
     </VStack>
   );
