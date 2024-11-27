@@ -1,20 +1,23 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import AuthPage from "./pages/AuthPage/AuthPage";
 import PageLayout from "./Layouts/PageLayout/PageLayout";
 import ProfilePage from "./pages/PrfoilePage/ProfilePage";
+import useAuthStore from "./store/authSore";
 
 function App() {
+  const authUser = useAuthStore((state) => state.user);
+
   return (
     <PageLayout>
       <Routes>
         <Route
           path="/"
-          element={<HomePage />}
+          element={authUser ? <HomePage /> : <Navigate to="/auth" />}
         />
         <Route
           path="/auth"
-          element={<AuthPage />}
+          element={!authUser ? <AuthPage /> : <Navigate to="/" />}
         />
         <Route
           path="/:username"
