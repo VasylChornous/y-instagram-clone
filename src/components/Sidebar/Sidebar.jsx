@@ -1,5 +1,5 @@
 import { Avatar, Box, Button, Flex, Link, Tooltip } from "@chakra-ui/react";
-import React from "react";
+
 import { Link as RouterLink } from "react-router-dom";
 import {
   CreatePostLogo,
@@ -40,7 +40,7 @@ const Sidebar = () => {
         />
       ),
       text: "Profile",
-      link: "/john",
+      link: "/vasya.chornous",
     },
   ];
   const { handleLogout, isLoggingOut } = useLogout();
