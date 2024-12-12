@@ -11,12 +11,13 @@ const useLogout = () => {
   const handleLogout = async () => {
     try {
       await signOut();
-      logoutUser();
       localStorage.removeItem("user-info");
+      logoutUser();
     } catch (error) {
-      showToast("Error", error.massage, "error");
+      showToast("Error", error.message, "error");
     }
   };
+
   return { handleLogout, isLoggingOut, error };
 };
 
