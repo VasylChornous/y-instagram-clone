@@ -38,7 +38,7 @@ const ProfileHeader = () => {
         mx={"auto"}
       >
         <Avatar
-          src={userProfile.profilePicUrl}
+          src={userProfile.profilePicURL}
           alt="logo"
         />
       </AvatarGroup>
